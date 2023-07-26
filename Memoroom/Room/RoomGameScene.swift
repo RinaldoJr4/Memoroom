@@ -42,7 +42,7 @@ class RoomGameScene: SKScene {
     var auxiliarCama2 = SKSpriteNode(color: .clear, size: CGSize(width: 250, height: 80))
     
     override func didMove(to view: SKView) {
-        generate3Random()
+        generateRandomRoom(quantity: 1)
         setup()
     }
     
