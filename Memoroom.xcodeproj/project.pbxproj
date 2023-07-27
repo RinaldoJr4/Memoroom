@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30EA5862A72C12D009F9FD2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EA5852A72C12D009F9FD2 /* MenuView.swift */; };
+		D30EA5882A72C603009F9FD2 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30EA5872A72C603009F9FD2 /* CustomProgressBar.swift */; };
 		D33C6D282A4A1E3E00A5A5ED /* MemoroomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C6D272A4A1E3E00A5A5ED /* MemoroomApp.swift */; };
 		D33C6D2A2A4A1E3E00A5A5ED /* RoomContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C6D292A4A1E3E00A5A5ED /* RoomContentView.swift */; };
 		D33C6D2C2A4A1E3F00A5A5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C6D2B2A4A1E3F00A5A5ED /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30EA5852A72C12D009F9FD2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D30EA5872A72C603009F9FD2 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		D33C6D242A4A1E3E00A5A5ED /* Memoroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33C6D272A4A1E3E00A5A5ED /* MemoroomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoroomApp.swift; sourceTree = "<group>"; };
 		D33C6D292A4A1E3E00A5A5ED /* RoomContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D30EA5892A72C61A009F9FD2 /* SuportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D30EA5872A72C603009F9FD2 /* CustomProgressBar.swift */,
+			);
+			path = SuportFiles;
+			sourceTree = "<group>";
+		};
 		D33C6D1B2A4A1E3E00A5A5ED = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				D33C6D272A4A1E3E00A5A5ED /* MemoroomApp.swift */,
+				D30EA5852A72C12D009F9FD2 /* MenuView.swift */,
 				D387C9692A4F58D000340925 /* Room */,
+				D30EA5892A72C61A009F9FD2 /* SuportFiles */,
 				D33C6D2B2A4A1E3F00A5A5ED /* Assets.xcassets */,
 				D33C6D2D2A4A1E3F00A5A5ED /* Preview Content */,
 			);
@@ -151,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30EA5862A72C12D009F9FD2 /* MenuView.swift in Sources */,
+				D30EA5882A72C603009F9FD2 /* CustomProgressBar.swift in Sources */,
 				D33C6D382A4A1E7A00A5A5ED /* RoomGameScene.swift in Sources */,
 				D33C6D2A2A4A1E3E00A5A5ED /* RoomContentView.swift in Sources */,
 				D3A4C9EF2A4E46A5005E1C0A /* RoomRandomGeneration.swift in Sources */,

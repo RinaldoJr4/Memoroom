@@ -12,20 +12,13 @@ class RoomGameScene: SKScene {
     
     @Binding var score: Int
     
-//  Essa parte do código é responsável por fazer a ponte entre a ContentView e a GameScene
-    public init(score: Binding<Int>,size: CGSize){
-        _score = score
-        super.init(size: size)
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+// MARK: Objetos do quarto
     
-    
+    // não interativos
     var fundo = SKSpriteNode(imageNamed: "quarto_base")
     var estante = SKSpriteNode(imageNamed: "quarto_estante")
     var mesa = SKSpriteNode(imageNamed: "quarto_mesa")
-    
+    // interativos
     var abajour = SKSpriteNode(imageNamed: "quarto_abajour_1")
     var bolsa = SKSpriteNode(imageNamed: "quarto_bolsa_1")
     var cama = SKSpriteNode(imageNamed: "quarto_cama_1")
@@ -37,16 +30,53 @@ class RoomGameScene: SKScene {
     var sapato = SKSpriteNode(imageNamed: "quarto_sapato_1")
     var urso = SKSpriteNode(imageNamed: "quarto_urso_1")
     var vaso = SKSpriteNode(imageNamed: "quarto_vaso_1")
-    
+    // auxiliares
     var auxiliarCama = SKSpriteNode(color: .clear, size: CGSize(width: 200, height: 150))
     var auxiliarCama2 = SKSpriteNode(color: .clear, size: CGSize(width: 250, height: 80))
+    
+//  Essa parte do código é responsável por fazer a ponte entre a ContentView e a GameScene
+    public init(score: Binding<Int>,size: CGSize){
+        _score = score
+        super.init(size: size)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented in RoomGameScene")
+    }
     
     override func didMove(to view: SKView) {
         generateRandomRoom(quantity: 1)
         setup()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch: UITouch in touches {
+            let location = touch.location(in: self)
+            let touchedNode = atPoint(location)
+//          Identifica em qual node clicou
+            
+            if touchedNode.name != nil {
+                let size = touchedNode.frame.size
+                let position = touchedNode.position
+                let zPosition = touchedNode.zPosition
+//              salva o tamanho e posicao
+                
+                touchedNode.removeFromParent()
+//              remove o antigo node com a cor errada
+                
+                let newNode = SKSpriteNode(imageNamed: touchedNode.name!)
+                newNode.size = size
+                newNode.position = position
+                newNode.zPosition = zPosition
+                addChild(newNode)
+//              coloca o novo node com a cor certa no lugar do outro
+                
+                score = score + 1
+            }
+        }
+    }
+    
     func setup() {
+        // MARK: Hierarquia
         fundo.size = self.size
         fundo.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         fundo.zPosition = 0
@@ -124,32 +154,5 @@ class RoomGameScene: SKScene {
         sapato.position = CGPoint(x: 315, y: 92)
         sapato.zPosition = 14
         addChild(sapato)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch: UITouch in touches {
-            let location = touch.location(in: self)
-            let touchedNode = atPoint(location)
-//          Identifica em qual node clicou
-            
-            if touchedNode.name != nil {
-                let size = touchedNode.frame.size
-                let position = touchedNode.position
-                let zPosition = touchedNode.zPosition
-//              salva o tamanho e posicao
-                
-                touchedNode.removeFromParent()
-//              remove o antigo node com a cor errada
-                
-                let newNode = SKSpriteNode(imageNamed: touchedNode.name!)
-                newNode.size = size
-                newNode.position = position
-                newNode.zPosition = zPosition
-                addChild(newNode)
-//              coloca o novo node com a cor certa no lugar do outro
-                
-                score = score + 1
-            }
-        }
     }
 }

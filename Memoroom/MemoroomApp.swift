@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct MemoroomApp: App {
-    
+        
     var body: some Scene {
         WindowGroup {
-            RoomContentView()
+            NavigationStack {
+                MenuView()
+            }
         }
     }
 }
