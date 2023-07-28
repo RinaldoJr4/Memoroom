@@ -10,6 +10,11 @@ import SwiftUI
 struct MenuView: View {
         
     var body: some View {
-        NavigationLink("Quarto", destination: RoomContentView().navigationBarBackButtonHidden())
+        VStack(spacing: 50) {
+            NavigationLink("Quarto", destination: RoomContentView().navigationBarBackButtonHidden())
+                .font(.largeTitle)
+            NavigationLink("Praia", destination: BeachContentView().navigationBarBackButtonHidden())
+                .font(.largeTitle)
+        }
     }
 }

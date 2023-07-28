@@ -15,6 +15,8 @@
 		D33C6D2F2A4A1E3F00A5A5ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33C6D2E2A4A1E3F00A5A5ED /* Preview Assets.xcassets */; };
 		D33C6D382A4A1E7A00A5A5ED /* RoomGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C6D372A4A1E7A00A5A5ED /* RoomGameScene.swift */; };
 		D3A4C9EF2A4E46A5005E1C0A /* RoomRandomGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4C9EE2A4E46A5005E1C0A /* RoomRandomGeneration.swift */; };
+		D3D0625C2A7458F000B65C6C /* BeachContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0625B2A7458F000B65C6C /* BeachContentView.swift */; };
+		D3D0625E2A74590700B65C6C /* BeachGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0625D2A74590700B65C6C /* BeachGameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		D33C6D2E2A4A1E3F00A5A5ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D33C6D372A4A1E7A00A5A5ED /* RoomGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameScene.swift; sourceTree = "<group>"; };
 		D3A4C9EE2A4E46A5005E1C0A /* RoomRandomGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRandomGeneration.swift; sourceTree = "<group>"; };
+		D3D0625B2A7458F000B65C6C /* BeachContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachContentView.swift; sourceTree = "<group>"; };
+		D3D0625D2A74590700B65C6C /* BeachGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachGameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			children = (
 				D33C6D272A4A1E3E00A5A5ED /* MemoroomApp.swift */,
 				D30EA5852A72C12D009F9FD2 /* MenuView.swift */,
+				D3D0625F2A74597700B65C6C /* Beach */,
 				D387C9692A4F58D000340925 /* Room */,
 				D30EA5892A72C61A009F9FD2 /* SuportFiles */,
 				D33C6D2B2A4A1E3F00A5A5ED /* Assets.xcassets */,
@@ -93,6 +98,15 @@
 				D3A4C9EE2A4E46A5005E1C0A /* RoomRandomGeneration.swift */,
 			);
 			path = Room;
+			sourceTree = "<group>";
+		};
+		D3D0625F2A74597700B65C6C /* Beach */ = {
+			isa = PBXGroup;
+			children = (
+				D3D0625B2A7458F000B65C6C /* BeachContentView.swift */,
+				D3D0625D2A74590700B65C6C /* BeachGameScene.swift */,
+			);
+			path = Beach;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +181,10 @@
 			files = (
 				D30EA5862A72C12D009F9FD2 /* MenuView.swift in Sources */,
 				D30EA5882A72C603009F9FD2 /* CustomProgressBar.swift in Sources */,
+				D3D0625E2A74590700B65C6C /* BeachGameScene.swift in Sources */,
 				D33C6D382A4A1E7A00A5A5ED /* RoomGameScene.swift in Sources */,
 				D33C6D2A2A4A1E3E00A5A5ED /* RoomContentView.swift in Sources */,
+				D3D0625C2A7458F000B65C6C /* BeachContentView.swift in Sources */,
 				D3A4C9EF2A4E46A5005E1C0A /* RoomRandomGeneration.swift in Sources */,
 				D33C6D282A4A1E3E00A5A5ED /* MemoroomApp.swift in Sources */,
 			);
