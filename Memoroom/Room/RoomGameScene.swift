@@ -11,6 +11,7 @@ import SwiftUI
 class RoomGameScene: SKScene {
     
     @Binding var score: Int
+    @Binding var difficulty: Int
     
 // MARK: Objetos do quarto
     
@@ -35,8 +36,9 @@ class RoomGameScene: SKScene {
     var auxiliarCama2 = SKSpriteNode(color: .clear, size: CGSize(width: 250, height: 80))
     
 //  Essa parte do código é responsável por fazer a ponte entre a ContentView e a GameScene
-    public init(score: Binding<Int>,size: CGSize){
+    public init(score: Binding<Int>,size: CGSize, difficulty: Binding<Int>){
         _score = score
+        _difficulty = difficulty
         super.init(size: size)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +46,7 @@ class RoomGameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        generateRandomRoom(quantity: 1)
+        generateRandomRoom(quantity: difficulty)
         setup()
     }
     
