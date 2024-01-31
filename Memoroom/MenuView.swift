@@ -11,9 +11,9 @@ struct MenuView: View {
         
     var body: some View {
         VStack(spacing: 50) {
-            NavigationLink("Quarto", destination: RoomContentView().navigationBarBackButtonHidden())
+            NavigationLink("Quarto", destination: RoomContentView())
                 .font(.largeTitle)
-            NavigationLink("Praia", destination: BeachContentView().navigationBarBackButtonHidden())
+            NavigationLink("Praia", destination: BeachContentView())
                 .font(.largeTitle)
         }
     }

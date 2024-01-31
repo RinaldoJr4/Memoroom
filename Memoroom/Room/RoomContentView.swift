@@ -71,11 +71,11 @@ struct RoomContentView: View {
                     ProgressView("", value: value, total: 0.7)
                         .progressViewStyle(CustomProgressBar(size: geo.size, score: score))
                         .onReceive(timer) { _ in
-                            withAnimation(.easeInOut) {
-                                if value > 0 {
-                                    value -= 0.1
-                                }
+                            //                            withAnimation(.easeInOut) {
+                            if value > 0 {
+                                value -= 0.1
                             }
+                            //                            }
                         }
                     Spacer()
                 }
